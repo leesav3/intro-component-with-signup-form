@@ -1,0 +1,139 @@
+/* css reset courtesy of josh comeau */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+ 
+  * {
+    margin: 0;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+ 
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  input, button, textarea, select {
+    font: inherit;
+  }
+ 
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+ 
+  #root, #__next {
+    isolation: isolate;
+  }
+/* end css reset */
+
+/* main styles */
+
+:root {
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url("../images/bg-intro-desktop.png");
+    background-color: var(--red);
+    color: var(--white);
+}
+
+main {
+    display: grid;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-bottom: 25px;
+}
+
+.purple-section {
+    background-color: var(--blue);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.form-container {
+    background-color: var(--white);
+    padding: 20px;
+    display: grid;
+    border-radius: 8px;
+}
+
+input {
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    border-width: thin;
+}
+
+.button {
+    background-color: var(--green);
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    color: var(--white);
+    border-radius: 8px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.disclaimer {
+    color: var(--grayish-blue);
+    font-size: .8rem;
+    text-align: center;
+}
+
+.disclaimer a {
+    color: var(--red);
+}
+
+a {
+    color: var(--white);
+}
+
+a:hover {
+    color: var(--blue);
+}
+
+.attribution {
+    text-align: center;
+}
+/* end main styles */
+
+/* media queries */
+
+/* mobile */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* desktop */
+@media only screen and (min-width: 601px) {
+
+    main {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        margin: 50px;
+    }
+}
+
+/* end media queries */
